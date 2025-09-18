@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,49 +10,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.db;
 
 namespace WpfApp2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        _1135крыловСистемаУправленияТренировкамиСпортсменовContext db;
+        public event PropertyChangedEventHandler? PropertyChanged;
+        void Signal([CallerMemberName] string prop = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-            var result = MessageBox.Show("Винде гг бывай чувак", "Твоя главная ошибка", MessageBoxButton.YesNoCancel);
-
-
-            if (result == MessageBoxResult.Yes)
-            {
-                while (1 == 1)
-                {
-                    MainWindow window1 = new MainWindow();
-                    window1.Show();
-
-
-                }
-
-            }
-            else if (result == MessageBoxResult.Cancel)
-            {
-                MessageBox.Show("Самый умный, да? Удаляем винду..", "ГГ ЧУВАК");
-
-                while (1 == 1)
-                {
-                    MainWindow window1 = new MainWindow();
-                    window1.Show();
-                }
-            }
-            else MessageBox.Show("Ну ладно..");
-
-        }
 
     }
 }

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WpfApp2
 {
     /// <summary>
-    /// Логика взаимодействия для LoginWindow.xaml
+    /// Логика взаимодействия для ListAthleteWindow.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class ListAthleteWindow : Window
     {
-        public LoginWindow()
+        public ListAthleteWindow()
         {
             InitializeComponent();
         }

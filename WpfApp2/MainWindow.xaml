@@ -7,26 +7,20 @@
         mc:Ignorable="d"
         Title="Окно Входа" Height="450" Width="800" MaxHeight="450" MaxWidth="950" MinHeight="450" MinWidth="800">
 
-    <Grid Background="LightBlue">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="800"/>
-            <ColumnDefinition Width="100"/>
+
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <ListView Grid.Column="1">
+            <ListView.View>
+                <GridView>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-
-            <Label Content="Нажмите на кнопку для входа" FontSize="50"/>
-            <Button Width="200" Height="60" Background="LightCyan" Content="Кнопка" FontSize="25" Click="Button_Click"/>
-
-        </StackPanel>
-
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
-
-            <Label Content="На эту)" FontSize="25"/>
-            <Button Width="80" Height="80" Background="LightCyan" Content="Кнопка" FontSize="20"/>
-
-        </StackPanel>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
